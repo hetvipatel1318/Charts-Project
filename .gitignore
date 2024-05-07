@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+
+# Vite build output
+dist/
+
+# Temporary files
+.vite/
+.vite-plugin-react/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor directories
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store

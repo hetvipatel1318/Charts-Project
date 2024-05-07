@@ -1,0 +1,20 @@
+runtime: nodejs20
+env: standard
+
+handlers:
+- url: /(.*\.(js))$
+  mime_type: application/javascript
+  static_files: dist/\1
+  upload: dist/.*\.(js)$
+
+- url: /(.*\.(json|ico|png|jpg|jpeg|css|svg|gif))$
+  static_files: dist/\1
+  upload: dist/.*\.(json|ico|png|jpg|jpeg|css|svg|gif)$
+
+- url: /.*
+  static_files: dist/index.html
+  upload: dist/index.html
+
+- url: /images/(.*\.(png|jpg|jpeg|gif|ico))$
+  static_files: dist/images/\1
+  upload: dist/images/.*\.(png|jpg|jpeg|gif|ico)$
